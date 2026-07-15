@@ -105,20 +105,6 @@ tests:
       - thingy91x/nrf9151/ns
     integration_platforms:
       - nrf9151dk/nrf9151/ns
-  serial_modem.memfault:
-    sysbuild: true
-    build_only: true
-    extra_args:
-      - EXTRA_CONF_FILE=overlay-memfault.conf
-      - EXTRA_DTC_OVERLAY_FILE="overlay-memfault.overlay"
-      - mcuboot_EXTRA_DTC_OVERLAY_FILE="${APP_DIR}/overlay-memfault.overlay"
-    extra_configs:
-      - CONFIG_MEMFAULT_NCS_PROJECT_KEY="dummy-key"
-    platform_allow:
-      - nrf9151dk/nrf9151/ns
-      - thingy91x/nrf9151/ns
-    integration_platforms:
-      - nrf9151dk/nrf9151/ns
   serial_modem.mfw_full_fota_and_dfu:
     sysbuild: true
     build_only: true
